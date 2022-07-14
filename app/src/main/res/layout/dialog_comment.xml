@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_rectangle02"
+    android:padding="20dp">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icback_24"
+        android:padding="5dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/backBtn"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="5dp"
+        android:text="Add Comment"
+        android:textAlignment="center"
+        android:textColor="#4796FB"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Comment"
+        android:id="@+id/edt1"
+        app:hintEnabled="false"
+        app:endIconMode="clear_text"
+        tools:ignore="HardcodedText">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentEdt"
+            android:background="@drawable/shape_edittext_01"
+            android:drawableStart="@drawable/ic_baseline_comment_24"
+            android:drawablePadding="10dp"
+            android:inputType="textPersonName|textCapSentences"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/cmtBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt1"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_button_01"
+        android:text="Submit" />
+
+</RelativeLayout>

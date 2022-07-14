@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="5dp"
+    app:contentPadding="5dp"
+    app:cardElevation="0dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/pdf"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/black">
+
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/pdfViewFv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBarBookFv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/titleTvBookFavorite"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/pdf"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Book title" />
+
+        <TextView
+            android:id="@+id/desTvBookFavorite"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTvBookFavorite"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/pdf"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="the description about book" />
+
+        <TextView
+            android:id="@+id/categoryTvBookFavorite"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="category" />
+
+        <TextView
+            android:id="@+id/sizeTvFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/pdf"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="512MB" />
+
+        <TextView
+            android:id="@+id/dateTvFv"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/categoryTvBookFavorite"
+            android:layout_toEndOf="@+id/sizeTvFavorite"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="dd/MM/yyyy"
+            android:textAlignment="center" />
+
+
+        <ImageButton
+            android:id="@+id/imFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_tym" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
